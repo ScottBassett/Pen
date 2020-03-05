@@ -8,16 +8,24 @@ import { Location } from '../location';
 })
 
 export class LocationDetailsComponent implements OnInit {
-  location: Location = {
-    LocationName: "Paul's desk",
-    pens: ["red one", "blue one"],
-  }
+
+  locationList: Location[]
 
   constructor() { }
 
   @Input() locations: Location[]
 
   ngOnInit(): void {
+    this.locationList = [{
+      LocationName: "Paul's desk",
+      Pens: ["red pen", "blue pen"]
+    },
+
+    {
+      LocationName: "Scott's desk",
+      Pens: ["black pen", "pink pen"]
+    }
+    ]
   }
 
 }
