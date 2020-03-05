@@ -1,3 +1,6 @@
 <ul>
-    <li *ngFor="let location of locationList">{{location.LocationName}}</li>
+    <li *ngFor="let location of locationList">
+        <a (click)="onSelectedPen(location)">{{location.LocationName}}</a>
+    </li>
+
 </ul>

@@ -1,6 +1,6 @@
-import { Component, Input, OnInit } from '@angular/core';
-import { Location } from '../location';
+import { Component, OnInit } from '@angular/core';
 import { locationArray } from '../helpers/location-list-constants';
+import { Location } from '../location';
 
 @Component({
   selector: 'app-location-details',
@@ -18,5 +18,6 @@ export class LocationDetailsComponent implements OnInit {
 
   ngOnInit(): void {
     this.locationList = locationArray()
-}}
+  }
+}
 
