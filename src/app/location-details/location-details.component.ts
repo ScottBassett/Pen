@@ -1,5 +1,6 @@
 import { Component, Input, OnInit } from '@angular/core';
 import { Location } from '../location';
+import { locationArray } from '../helpers/location-list-constants';
 
 @Component({
   selector: 'app-location-details',
@@ -13,20 +14,9 @@ export class LocationDetailsComponent implements OnInit {
 
   constructor() { }
 
-  @Input() locations: Location[]
+  //@Input() locations: Location[]
 
   ngOnInit(): void {
-    this.locationList = [{
-      LocationName: "Paul's desk",
-      Pens: ["red pen", "blue pen"]
-    },
-
-    {
-      LocationName: "Scott's desk",
-      Pens: ["black pen", "pink pen"]
-    }
-    ]
-  }
-
-}
+    this.locationList = locationArray()
+}}
 

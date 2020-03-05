@@ -1,10 +1,5 @@
-<h2>Test Header</h2>
-
-<ul>
-    <li *ngFor="let location of locationList">
-        {{location.LocationName}}
-        <ul>
-            <li *ngFor="let pen of location.Pens">{{pen}}</li>
-        </ul>
-    </li>
-</ul>
+<div *ngFor="let pen of locationList">
+    <ul>
+        <li *ngFor="let p of pen.Pens">{{p}}</li>
+    </ul>
+</div>
